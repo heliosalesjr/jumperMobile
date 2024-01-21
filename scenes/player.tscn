@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjv0ynpbx7uu4"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_8o5ac"]
-[ext_resource type="Texture2D" uid="uid://c06o51ynt35ak" path="res://asets/textures/character/Skin1Idle.png" id="1_74kjq"]
-[ext_resource type="Texture2D" uid="uid://b6bm68gnj575u" path="res://asets/textures/character/Skin1Jump.png" id="2_tr8gq"]
+[ext_resource type="Texture2D" uid="uid://c06o51ynt35ak" path="res://assets/textures/character/Skin1Idle.png" id="2_kl08k"]
+[ext_resource type="Texture2D" uid="uid://b6bm68gnj575u" path="res://assets/textures/character/Skin1Jump.png" id="3_ukgnb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ua2px"]
 size = Vector2(32, 22)
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_74kjq")]
+"values": [ExtResource("2_kl08k")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -58,7 +58,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_tr8gq")]
+"values": [ExtResource("3_ukgnb")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -99,7 +99,7 @@ script = ExtResource("1_8o5ac")
 z_index = 100
 position = Vector2(0, -46)
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("1_74kjq")
+texture = ExtResource("2_kl08k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -11)

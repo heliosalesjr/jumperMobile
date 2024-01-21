@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://dyr036b3vvldt"]
+
+[ext_resource type="Script" path="res://scripts/player_two.gd" id="1_yb6un"]
+[ext_resource type="Texture2D" uid="uid://d1r1poxe64ijw" path="res://assets/curupira/Spritesheet - Animação Idle .png" id="2_6vrd6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_224w5"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sumd5"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_min5e"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3ibk"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxei2"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtnnq"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i37rh"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n26pn"]
+atlas = ExtResource("2_6vrd6")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jv3nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_224w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sumd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_min5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3ibk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxei2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtnnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i37rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n26pn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vukuk"]
+size = Vector2(9, 18)
+
+[node name="PlayerTwo" type="CharacterBody2D"]
+script = ExtResource("1_yb6un")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -12)
+sprite_frames = SubResource("SpriteFrames_jv3nq")
+animation = &"idle"
+autoplay = "idle"
+frame = 6
+frame_progress = 0.563579
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -9)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_vukuk")
