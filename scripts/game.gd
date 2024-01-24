@@ -1,11 +1,32 @@
 extends Node2D
 
+@onready var platform_parent = $PlatformParent
 
-# Called when the node enters the scene tree for the first time.
+var platform_scene = preload("res://scenes/platform.tscn")
+
+var camera_scene = preload("res://scenes/game_camera.tscn")
+
+var camera = null
+
 func _ready():
-	pass # Replace with function body.
+	camera = camera_scene.instantiate()
+	camera.setup_camera($Player)
+	add_child(camera)
+	
+	create_platform(Vector2(100, 300))
+	create_platform(Vector2(100, 500))
+	create_platform(Vector2(100, 800))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
+
+
+func create_platform(location: Vector2):
+	var platform = platform_scene.instantiate()
+	platform.global_position = location
+	platform_parent.add_child(platform)
+	return platform

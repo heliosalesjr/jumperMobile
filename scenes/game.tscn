@@ -13,11 +13,16 @@ position = Vector2(249, 444)
 [node name="Platform" parent="." instance=ExtResource("3_vpal5")]
 position = Vector2(188, 882)
 
-[node name="Platform2" parent="." instance=ExtResource("3_vpal5")]
-position = Vector2(387, 630)
+[node name="Platform5" parent="." instance=ExtResource("3_vpal5")]
+position = Vector2(440, 882)
 
-[node name="Platform3" parent="." instance=ExtResource("3_vpal5")]
-position = Vector2(64, 179)
+[node name="Platform6" parent="." instance=ExtResource("3_vpal5")]
+position = Vector2(319, 885)
 
-[node name="Platform4" parent="." instance=ExtResource("3_vpal5")]
-position = Vector2(311, 368)
+[node name="Platform7" parent="." instance=ExtResource("3_vpal5")]
+position = Vector2(62, 882)
+
+[node name="Platform8" parent="." instance=ExtResource("3_vpal5")]
+position = Vector2(-67, 879)
+
+[node name="PlatformParent" type="Node2D" parent="."]
