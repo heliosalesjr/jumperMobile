@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var platform_parent = $PlatformParent
+@onready var player = $Player
 
 var camera_scene = preload("res://scenes/game_camera.tscn")
 var platform_scene = preload("res://scenes/platform.tscn")
@@ -9,7 +10,7 @@ var camera = null
 
 # Level gen variables
 var start_platform_y
-var y_distance_between_platforms = 100
+var y_distance_between_platforms = 200
 var level_size = 50
 var generated_platform_count = 0
 var viewport_size
@@ -29,6 +30,14 @@ func _process(delta):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
+	
+	if player:
+		var py = player.global_position.y
+		var end_of_level_pos = start_platform_y - (generated_platform_count * y_distance_between_platforms)
+		var threshold = end_of_level_pos + (y_distance_between_platforms*6)
+		if py <= threshold:
+			generate_level(end_of_level_pos, false)
+
 
 func create_platform(location: Vector2):
 	var platform = platform_scene.instantiate()
@@ -58,5 +67,5 @@ func generate_level(start_y: float, generate_ground: bool):
 		print(location)
 		create_platform(location)
 		generated_platform_count += 1
-	print(generated_platform_count)
+		print(generated_platform_count)
 
