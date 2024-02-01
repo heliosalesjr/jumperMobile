@@ -5,7 +5,7 @@ extends Node2D
 var platform_scene = preload("res://scenes/platform.tscn")
 # Level gen variables
 var start_platform_y
-var y_distance_between_platforms = 100
+var y_distance_between_platforms = 200
 var level_size = 50
 var generated_platform_count = 0
 var viewport_size
