@@ -13,17 +13,17 @@ func _ready():
 	limit_right = viewport_size.x
 	
 	
-func _process(delta):
+func _process(_delta):
 	if player:
 		var limit_distance = 420
 		if limit_bottom > player.global_position.y + limit_distance:
-			limit_bottom = player.global_position.y + limit_distance
+			limit_bottom = int(player.global_position.y + limit_distance)
 
 
 func setup_camera(_player: Player):
 	if _player:
 		player = _player
 		
-func _physics_process(delta):
+func _physics_process(_delta):
 	if player:
 		global_position.y = player.global_position.y

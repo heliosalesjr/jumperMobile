@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var ground_sprite = $GroundSprite
+
 
 @onready var level_generator = $LevelGenerator
 var player: Player = null
@@ -14,9 +16,13 @@ func _ready():
 	var player_spawn_pos_y_offset = 160
 	player_spawn_pos.x = viewport_size.x / 2
 	player_spawn_pos.y = viewport_size.y - player_spawn_pos_y_offset
+	
+	ground_sprite.global_position.x = viewport_size.x/2
+	ground_sprite.global_position.y = viewport_size.y
+	
 	new_game()
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
@@ -28,7 +34,7 @@ func new_game():
 	add_child(player)
 	
 	camera = camera_scene.instantiate()
-	camera.setup_camera($Player)
+	camera.setup_camera(player)
 	add_child(camera)
 
 	if player:
