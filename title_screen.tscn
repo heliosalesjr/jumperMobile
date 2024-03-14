@@ -3,6 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://c73r7g3f5ldkn" path="res://assets/textures/ui/BigLogo.png" id="1_11r5s"]
 [ext_resource type="Texture2D" uid="uid://dybyey2nse4vq" path="res://assets/textures/ui/PlayBtn.png" id="2_m8e4n"]
 
+[sub_resource type="Animation" id="Animation_gmwp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Play:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, 496)]
+}
+
 [sub_resource type="Animation" id="Animation_g877u"]
 resource_name = "animate_play"
 length = 2.0
@@ -18,21 +33,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-72, 13), Vector2(-72, 33)]
-}
-
-[sub_resource type="Animation" id="Animation_gmwp2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Play:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(178, 496)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m2ko6"]
@@ -80,7 +80,7 @@ texture = ExtResource("1_11r5s")
 expand_mode = 1
 
 [node name="Play" type="TouchScreenButton" parent="Control"]
-position = Vector2(-72, 13)
+position = Vector2(178, 496)
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("2_m8e4n")
 
