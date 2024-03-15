@@ -8,7 +8,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Play:position")
+tracks/0/path = NodePath("Control/TitlePlay:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -25,7 +25,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Play:position")
+tracks/0/path = NodePath("Control/TitlePlay:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -79,12 +79,12 @@ grow_vertical = 2
 texture = ExtResource("1_11r5s")
 expand_mode = 1
 
-[node name="Play" type="TouchScreenButton" parent="Control"]
+[node name="TitlePlay" type="TouchScreenButton" parent="Control"]
 position = Vector2(178, 496)
 scale = Vector2(0.75, 0.75)
 texture_normal = ExtResource("2_m8e4n")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TitlePlay" type="TextureButton" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
