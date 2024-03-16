@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1lmjhjpdhqk2"]
+[gd_scene load_steps=8 format=3 uid="uid://tkc60lkkveiu"]
 
 [ext_resource type="Texture2D" uid="uid://c73r7g3f5ldkn" path="res://assets/textures/ui/BigLogo.png" id="1_qc3d2"]
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_ufe73"]
