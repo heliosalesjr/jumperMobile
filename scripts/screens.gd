@@ -2,9 +2,17 @@ extends CanvasLayer
 
 @onready var console = $Debug/ConsoleLog
 
+@onready var title_screen = $TitleScreen
+@onready var pause_screen = $PauseScreen
+@onready var game_over_screen = $GameOverScreen
+
+var current_screen = null
+
 func _ready():
 	console.visible = false
 	register_buttons()
+	
+	change_screen(title_screen)
 	
 func register_buttons():
 	var buttons = get_tree().get_nodes_in_group("buttons")
@@ -34,3 +42,10 @@ func _process(delta):
 
 func _on_toggle_console_pressed():
 	console.visible = !console.visible
+
+func change_screen(new_screen):
+	if current_screen != null:
+		current_screen.disappear()
+	current_screen = new_screen
+	if current_screen != null:
+		current_screen.appear()
