@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://8p0fxwcxsy8q"]
 
-[ext_resource type="Script" path="res://scenes/pause_screen.gd" id="1_boesv"]
+[ext_resource type="Script" path="res://scripts/base_screen.gd" id="1_elwe1"]
 [ext_resource type="Texture2D" uid="uid://brltlvtmwoir1" path="res://assets/textures/ui/Box02.png" id="1_jx2sj"]
 [ext_resource type="Texture2D" uid="uid://djtwyeffr0fnj" path="res://assets/textures/ui/PausedText.png" id="2_qc73l"]
 [ext_resource type="PackedScene" uid="uid://ba1jwmiwsl2ju" path="res://scenes/screen_button.tscn" id="3_4i2f1"]
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_boesv")
+script = ExtResource("1_elwe1")
 
 [node name="BlackBG" type="ColorRect" parent="."]
 layout_mode = 1
