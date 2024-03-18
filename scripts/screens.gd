@@ -25,6 +25,7 @@ func _on_button_pressed(button):
 	match button.name:
 		"TitlePlay":
 			print("Play button is pressed")
+			
 		"PauseRetry":
 			print("Pause retry")
 		"PauseBack":

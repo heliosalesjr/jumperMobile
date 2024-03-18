@@ -11,11 +11,11 @@
 [node name="Screens" type="CanvasLayer"]
 script = ExtResource("1_7l4uy")
 
-[node name="GameOverScreen" parent="." instance=ExtResource("4_sc5j5")]
+[node name="TitleScreen" parent="." instance=ExtResource("3_ma3rg")]
 
 [node name="PauseScreen" parent="." instance=ExtResource("3_60ugt")]
 
-[node name="TitleScreen" parent="." instance=ExtResource("3_ma3rg")]
+[node name="GameOverScreen" parent="." instance=ExtResource("4_sc5j5")]
 
 [node name="Debug" type="Control" parent="."]
 z_index = 4096
